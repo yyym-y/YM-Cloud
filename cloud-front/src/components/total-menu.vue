@@ -2,7 +2,7 @@
   <div>
     <div v-for="(pr, index) in info" :key="index">
         <firstMenu
-            :imgSrc="require('@/assets/ABC.png')" :name="pr.name" :openImgSrc="require('@/assets/ABC-colored.png')">
+            :imgSrc="pr.imgSrc" :name="pr.name" :openImgSrc="pr.openImgSrc">
         </firstMenu>
     </div>
   </div>
@@ -18,23 +18,23 @@ export default {
         return {
             info : [
                 {
-                    "imgSrc" : "@/assets/ABC.png",
+                    "imgSrc" : require('@/assets/ABC.png'),
                     "name" : "Vocabulary",
-                    "openImgSrc" : "@/assets/ABC-colored",
+                    "openImgSrc" : require('@/assets/ABC-colored.png'),
                     "userKey" : 1,
                     "firstMenuKey" : 1
                 },
                 {
-                    "imgSrc" : "@/assets/ABC.png",
+                    "imgSrc" : require('@/assets/ABC.png'),
                     "name" : "Vocabulary",
-                    "openImgSrc" : "@/assets/ABC-colored",
+                    "openImgSrc" : require('@/assets/ABC-colored.png'),
                     "userKey" : 1,
                     "firstMenuKey" : 1
                 },
                 {
-                    "imgSrc" : "@/assets/ABC.png",
+                    "imgSrc" : require('@/assets/ABC.png'),
                     "name" : "Vocabulary",
-                    "openImgSrc" : "@/assets/ABC-colored",
+                    "openImgSrc" : require('@/assets/ABC-colored.png'),
                     "userKey" : 1,
                     "firstMenuKey" : 1
                 }

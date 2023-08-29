@@ -20,10 +20,10 @@ export default {
       let ele = this.$refs.wapper
       if(newValue){
         ele.style.color = "#DB8850"
-        ele.style.fontSize = "2.2vh"
+        ele.style.fontSize = "15px"
       }else {
         ele.style.color = "#B1AAA5"
-        ele.style.fontSize = "1.8vh"
+        ele.style.fontSize = "10px"
       }
     }
   }
