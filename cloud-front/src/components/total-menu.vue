@@ -1,12 +1,10 @@
 <template>
   <div>
     <div v-for="(pr, index) in info" :key="index">
-        <!-- <firstMenu
-            :imgSrc="require('../assets/' + pr.imgSrc)" :name="pr.name" :openImgSrc="require()">
-        </firstMenu> -->
-        {{ '../assets/' + pr.imgSrc }}
+        <firstMenu
+            :imgSrc="require('@/assets/ABC.png')" :name="pr.name" :openImgSrc="require('@/assets/ABC-colored.png')">
+        </firstMenu>
     </div>
-    <firstMenu></firstMenu>
   </div>
 </template>
 
@@ -20,7 +18,21 @@ export default {
         return {
             info : [
                 {
-                    "imgSrc" : "ABC.png",
+                    "imgSrc" : "@/assets/ABC.png",
+                    "name" : "Vocabulary",
+                    "openImgSrc" : "@/assets/ABC-colored",
+                    "userKey" : 1,
+                    "firstMenuKey" : 1
+                },
+                {
+                    "imgSrc" : "@/assets/ABC.png",
+                    "name" : "Vocabulary",
+                    "openImgSrc" : "@/assets/ABC-colored",
+                    "userKey" : 1,
+                    "firstMenuKey" : 1
+                },
+                {
+                    "imgSrc" : "@/assets/ABC.png",
                     "name" : "Vocabulary",
                     "openImgSrc" : "@/assets/ABC-colored",
                     "userKey" : 1,

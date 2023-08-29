@@ -12,8 +12,8 @@ export default {
 
 <style scoped>
   .info{
-    height: 80vh;
-    width: 57.9vw;
+    height: 626.5px;
+    width: 922px;
     background-color: #EBF1FD;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;

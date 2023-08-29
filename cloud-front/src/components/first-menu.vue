@@ -69,36 +69,38 @@ export default {
         user-select: none;
     }
     .top{
-        width: 13vw;
-        height: 4.5vh;
+        width: 170px;
+        height: 21px;
         margin-top: 15px;
+        margin-left: 15px;
     }
     .img1{
-        width: 3vh;
-        height: 3vh;
+        width: 21px;
+        height: 21px;
         float: left;
         background-size: 100% 100%;
     }
     .name{
-        width: 6vw;
-        height: 3vh;
+        width: 77.7px;
+        height: 20.3px;
         display: flex;
         /* justify-content: center; */
         align-items: center;
         color: #A8A8AC;
-        font-size: 2vh;
+        font-size: 14px;
         float: left;
-        margin-left: 30px;
+        margin-left: 16px;
     }
     .bottom{
         margin-top: 10px;
     }
     .img2{
-        width: 1.5vh;
-        height: 1.5vh;
+        width: 14px;
+        height: 14px;
         float: right;
         background-size: 100% 100%;
         transform: rotate(-90deg);
-        margin-top: 1vh;
+        margin-top: 5.6px;
+        margin-right: 7px;
     }
 </style>

@@ -32,22 +32,22 @@ export default {
 
 <style scoped>
     .area{
-      height: 3vh;
-      width: 9vw;
+      height: 22px;
+      width: 150px;
       margin-left: 2.5vw;
     }
     .content{
-      height: 3vh;
-      width: 7vw;
-      font-size: 1.8vh;
+      height: 20.3px;
+      width:  120px;
+      font-size: 10px;
       float: left;
-      margin-left: 35px;
+      margin-left: 25px;
       display: flex;
       align-items: center;
       color : #B1AAA5;
     }
     .bar{
-      height: 3vh;
+      height: 22px;
       width: 1.5px;
       background-color: #B1AAA5;
       float: left;

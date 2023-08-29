@@ -17,8 +17,8 @@ export default {
 
 <style scoped>
     .area{
-        width: 75vw;
-        height: 80vh;
+        width: 1151.5px;
+        height: 626.5px;
         z-index: 3;
         border-radius: 30px;
     }

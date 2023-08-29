@@ -17,15 +17,15 @@ import logo from '@/components/logo-info.vue'
 import Menu from '@/components/total-menu.vue'
 export default {
   components: {
-    logo, Menu
+    logo , Menu
   }
 }
 </script>
 
 <style scoped>
   .info{
-    height: 80vh;
-    width: 17vw;
+    height: 626.5px;
+    width: 226px;
     background-color: white;
     border-top-left-radius: 30px;
     border-bottom-left-radius: 30px;
@@ -37,19 +37,19 @@ export default {
   }
   .llogo{
     margin: 0 auto;
-    margin-top: 37px;
-    width: 15vw;
-    height: 100px;
+    margin-top: 32px;
+    width: 204px;
+    height: 63px;
     display: flex;
     justify-content: center;
   }
   .menuBar{
-    width: 13vw;
-    height: 30px;
-    font-size: 20px;
+    width: 180px;
+    height: 20.3px;
+    font-size: 13px;
     font-weight: 700;
     color: #AEAFB8;
-    margin: 40px auto;
+    margin: 25px auto;
   }
   .list{
     width: 11vw;
