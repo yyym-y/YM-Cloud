@@ -10,7 +10,7 @@
 
 YM~Cloud是一位SCNU在读计算机大学生建立的网站，旨在为不同用户提供学习以及相关实用工具。
 
-该网站开源并且欢迎其他人优化，gitHub地址为 ： 
+该网站开源并且欢迎其他人优化，gitHub地址为 ： https://github.com/yyym-y/YM-Cloud
 
 此外，YM~Cloud还提供了一个平台，用于展示大学期间团队或者个人完成的项目，用于答辩展示以及提供给他人使用
 
@@ -26,7 +26,7 @@ YM~Cloud是一位SCNU在读计算机大学生建立的网站，旨在为不同�
 
 YM~Cloud is a website established by a SCNU computer science student, aimed at providing learning and related practical tools for different users.
 
-The website is open source and welcomes others to optimize it. The GitHub address is:
+The website is open source and welcomes others to optimize it. The GitHub address is: https://github.com/yyym-y/YM-Cloud
 
 In addition, YM~Cloud also provides a platform for displaying team or personal projects completed during college, which can be used for defense display and provided to others.
 
