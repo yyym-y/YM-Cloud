@@ -4,6 +4,12 @@
 
 
 
+> 现在没有网站的地址，毕竟作者还是一个苦逼的未成年，买不了服务器和域名...
+>
+> There is no address for the website now. After all, the author is still a hard-working minor and cannot buy a server and domain name...
+
+
+
 # YM~Cloud
 
 
