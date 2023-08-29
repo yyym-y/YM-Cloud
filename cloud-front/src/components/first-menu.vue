@@ -2,7 +2,7 @@
     <div class="area">
         <div class="top" @click="OpenSecondMenu">
             <img class="img1" :src="nowPic" ref="iimg">
-            <div class="name">{{ name }}</div>
+            <div class="name" ref="name">{{ name }}</div>
             <img class="img2" src="@/assets/arrow.png" ref="arrr">           
         </div>
         <div class="bottom" v-if="ifOpen">
@@ -20,7 +20,7 @@
 import secondMenu from './second-menu.vue'
 export default {
     components: {secondMenu},
-    props : ['imgSrc', 'name', 'openImgSrc'],
+    props : ['imgSrc', 'name', 'openImgSrc', 'userKey', 'firstMenuKey', 'ifClick', 'ifCloseSon'],
     data() {
         return {
             info:[
@@ -35,12 +35,15 @@ export default {
         }
     },
     methods: {
+        // 当儿子被点击的时候执行的方法， 获取儿子的编号， 会返回父亲编号以及儿子编号
         clickNumMethod(keyValue) {
             if(this.lastClick != -1)
                 this.info[this.lastClick - 1].ifLight = false
             this.lastClick = keyValue
             this.info[keyValue - 1].ifLight = true
+            this.$emit("ifClick", {"father" : this.firstMenuKey, "son" : keyValue, "static" : this.ifOpen})
         },
+        // 翻转箭头
         flipArrow() {
             let ele = this.$refs.arrr
             if(this.ifOpen)
@@ -48,18 +51,41 @@ export default {
             else
                 ele.style.transform = "rotate(-90deg)"
         },
+        // 修改标签的图片
         changeMenuImg() {
             if(this.ifOpen) this.nowPic = this.openImgSrc
             else this.nowPic = this.imgSrc
         },
+        //打开二级菜单, 单击标题栏会返回父亲编号并且儿子编号为 -1
         OpenSecondMenu() {
             this.ifOpen = ! this.ifOpen
             this.flipArrow()
             this.changeMenuImg()
+            this.$emit("ifClick", {"father" : this.firstMenuKey, "son" : -1, "static" : this.ifOpen})
         }
     },
     mounted() {
         this.nowPic = this.imgSrc
+    },
+    watch: {
+        //监测ifClick， 如果为true， 就会高亮该标签
+        ifClick(newValue){
+            let ele = this.$refs.name
+            if(newValue){
+                ele.style.color = "#DB8850"
+                ele.style.fontWeight = "700"
+            }else{
+                ele.style.color = "#A8A8AC"
+                ele.style.fontWeight = "500"
+            }
+        },
+        //监测ifCloseSon， 如果为true， 就把ifLight全部置为false， 即儿子全部熄灭
+        ifCloseSon(newValue){
+            if(newValue){
+                for(let i = 0 ; i < this.info.length ; i++)
+                    this.info[i].ifLight = false
+            }
+        }
     }
 }
 </script>
