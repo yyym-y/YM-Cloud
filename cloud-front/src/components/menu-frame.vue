@@ -22,14 +22,7 @@ export default {
                         "name" : "Vocabulary",
                         "firstMenuKey" : 1,
                         "ifHaveSecondMenu" : true,
-                    },
-                    {
-                        "imgSrc" : require('@/assets/vocabulary/ABC.png'),
-                        "openImgSrc" : require('@/assets/vocabulary/ABC-colored.png'),
-                        "name" : "Vocabulary",
-                        "firstMenuKey" : 2,
-                        "ifHaveSecondMenu" : false,
-                    },
+                    }
                 ],
                 "secondInfos" : [
                     [
@@ -37,8 +30,7 @@ export default {
                         {"secondMenuKey": 2, "name": "四级词汇"},
                         {"secondMenuKey": 3, "name": "六级词汇"},
                         {"secondMenuKey": 4, "name": "考研词汇"}                   
-                    ],
-                    []
+                    ]
                 ]
             }   
             

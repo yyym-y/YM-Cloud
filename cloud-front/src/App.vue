@@ -1,12 +1,9 @@
 <template>
   <div class="area">
-    <!-- <first-menu 
-      :imgSrc="require('@/assets/ABC.png')" :name="name" :openImgSrc="require('@/assets/ABC-colored.png')">
-    </first-menu> -->
-    <!-- <canvas class="background"></canvas> -->
-    <div class="real">
-      <Box></Box>
-    </div>
+      <div class="real">
+        <Box></Box>
+      </div>      
+    <canvas class="background"></canvas>
   </div>
 </template>
 <script>
@@ -28,7 +25,8 @@
     display: block;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
+    background-color: #1cefff;
   }
   .real{
     height: 100vh;
@@ -36,8 +34,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 1;
-    background: #1cefff;
+    z-index: 2;
     position: absolute;
   }
   *{

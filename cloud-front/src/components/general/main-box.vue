@@ -19,7 +19,7 @@ export default {
     .area{
         width: 1151.5px;
         height: 626.5px;
-        z-index: 3;
+        z-index: 2;
         border-radius: 30px;
     }
 </style>
