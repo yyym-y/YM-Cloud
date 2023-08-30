@@ -62,3 +62,59 @@
 
 
 
+
+
+> 2023 - 8 - 30
+
+对于左侧菜单栏组件耦合程度过高的问题进行了解决，将左侧菜单栏单独封装好
+
+以后需要增加或者修改左侧菜单栏只需要对 `menu-farme.vue` 进行修改就好了
+
+目前还没有向后端请求，只有有请求可以更加精简
+
+* 注意 ： 封装后存在一个问题
+
+  > 组件选项中有一个是否有二级菜单的选项，现阶段如果选择false会存在高亮的问题
+  >
+  > 暂时先不解决，以后再说
+
+格式化了所有文件，将不同文件放置于对应文件夹，增加可维护性
+
+`menu-farme.vue `数据格式为
+
+```vue
+    data(){
+        return {
+            info : {
+                "userKey" : 1,
+                "firstMenuInfos" : [
+                    {
+                        "imgSrc" : require('@/assets/vocabulary/ABC.png'),
+                        "openImgSrc" : require('@/assets/vocabulary/ABC-colored.png'),
+                        "name" : "Vocabulary",
+                        "firstMenuKey" : 1,
+                        "ifHaveSecondMenu" : true,
+                    },
+                    {
+                        "imgSrc" : require('@/assets/vocabulary/ABC.png'),
+                        "openImgSrc" : require('@/assets/vocabulary/ABC-colored.png'),
+                        "name" : "Vocabulary",
+                        "firstMenuKey" : 2,
+                        "ifHaveSecondMenu" : false,
+                    },
+                ],
+                "secondInfos" : [
+                    [
+                        {"secondMenuKey": 1, "name": "ALL"},
+                        {"secondMenuKey": 2, "name": "四级词汇"},
+                        {"secondMenuKey": 3, "name": "六级词汇"},
+                        {"secondMenuKey": 4, "name": "考研词汇"}                   
+                    ],
+                    []
+                ]
+            }   
+            
+        }
+    },
+```
+

@@ -10,7 +10,7 @@
   </div>
 </template>
 <script>
-  import Box from '@/components/main-box.vue'
+  import Box from '@/components/general/main-box.vue'
   export default {
     components: {
       Box
