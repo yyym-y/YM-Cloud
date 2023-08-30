@@ -17,6 +17,7 @@ export default {
     .area{
         height: 52px;
         width: 450px;
+        float: left;
     }
     .first-name{
         width: 152px;
@@ -32,7 +33,7 @@ export default {
     .img{
         height: 30px;
         width: 30px;
-        background-image: url("../../public/img/arrow.png");
+        background-image: url("@/assets/general/arrow.png");
         background-size: 100% 100%;
         transform: rotate(-90deg);
         float: left;
