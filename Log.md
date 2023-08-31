@@ -128,3 +128,59 @@
 
 使用axios 发送的时候发现没有等数据接收到就渲染，导致二级菜单为空，换成同步传输未成功
 
+
+
+
+
+> 2023 - 8 - 31
+
+解决了从后端接收数据但是前端无法渲染的问题，问题其实十分的简单
+
+后端发送的数据格式为：
+
+```json
+{
+    "code": 1,
+    "msg": "success",
+    "data": {
+        "secondInfos": [
+            ....
+        ]
+    }
+}
+```
+
+而前端接收数据的方法却是 ：
+
+```js
+async created() {
+        await axios.get("https://yapi.pro/mock/44512/yyym/menu")
+                   .then(result => {
+                        this.secondMenuInfos = result.data.data
+                   })
+    }
+```
+
+接收的数据为：
+
+```json
+"secondInfos": [....]
+```
+
+而 secondInfo所需要的数据格式为：
+
+```json
+[[{"secondMenuKey": 1,"name": "ALL"}],[{"secondMenuKey": 1,"name": "ALL"}]]
+```
+
+所以正确的接收方式为：
+
+```js
+async created() {
+    await axios.get("https://yapi.pro/mock/44512/yyym/menu")
+        .then(result => {
+        this.secondMenuInfos = result.data.data.secondInfos
+    })
+}
+```
+
