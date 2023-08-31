@@ -74,6 +74,8 @@ export default {
        
     },
     created() {
+        console.log("total-menu")
+        console.log(this.secondMenuInfos)
         for(let i = 0 ; i < this.firstMenuInfos.length ; i++){
             this.ifClick.push(false)
             this.ifCloseSon.push(true)

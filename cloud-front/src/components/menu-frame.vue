@@ -8,7 +8,6 @@
 <script>
 import Menu from '@/components/general/total-menu.vue'
 import Bus from '@/utils/bus.js'
-import {getSecondMenuInfos} from '@/utils/communicate.js'
 import axios from 'axios'
 export default {
     components : {
@@ -32,7 +31,7 @@ export default {
                     "ifHaveSecondMenu" : true,
                 }
             ],
-            secondMenuInfos : []
+            secondMenuInfos : [[{"secondMenuKey": 1,"name": "ALL"}],[{"secondMenuKey": 1,"name": "ALL"}]]
         }
     },
     methods: {
@@ -40,50 +39,12 @@ export default {
             Bus.$emit('getBarName', this.firstMenuInfos[value.father - 1].name)
         }
     },
-    async mounted() {
-        console.log(getSecondMenuInfos(1))
+    // 以下方法是在创建vue实例的时候将secondMenuInfos从后端请求回来
+    async created() {
         await axios.get("https://yapi.pro/mock/44512/yyym/menu")
-             .then(result =>{
-                this.secondMenuInfos = result.data.data
-             })
-        // this.secondMenuInfos = [
-        //     [
-        //         {
-        //             "secondMenuKey": 1,
-        //             "name": "ALL"
-        //         },
-        //         {
-        //             "secondMenuKey": 2,
-        //             "name": "四级词汇"
-        //         },
-        //         {
-        //             "secondMenuKey": 3,
-        //             "name": "六级词汇"
-        //         },
-        //         {
-        //             "secondMenuKey": 4,
-        //             "name": "考研词汇"
-        //         }
-        //     ],
-        //     [
-        //         {
-        //             "secondMenuKey": 1,
-        //             "name": "图床1"
-        //         },
-        //         {
-        //             "secondMenuKey": 2,
-        //             "name": "图床2"
-        //         },
-        //         {
-        //             "secondMenuKey": 3,
-        //             "name": "图床3"
-        //         },
-        //         {
-        //             "secondMenuKey": 4,
-        //             "name": "图床4"
-        //         }
-        //     ]
-        // ]
+                   .then(result => {
+                        this.secondMenuInfos = result.data.data.secondInfos
+                   })
     }
 }
 </script>

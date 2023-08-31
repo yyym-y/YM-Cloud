@@ -44,9 +44,9 @@ export default {
         },
         // 翻转箭头
         flipArrow() {
-            if(! this.firstMenuInfo.ifHaveSecondMenu){
-                return
-            }
+            // if(! this.firstMenuInfo.ifHaveSecondMenu){
+            //     return
+            // }
             let ele = this.$refs.arrr
             if(this.ifOpen)
                 ele.style.transform = "rotate(0deg)"
@@ -70,6 +70,9 @@ export default {
     },
     created() {
         this.nowPic = this.firstMenuInfo.imgSrc
+        console.log(this.secondMenuInfos)
+        // if(typeof(this.secondMenuInfos) == "undefined")
+        //     return        
         for(let i = 0 ; i < this.secondMenuInfos.length ; i++)
             this.ifLight.push(false)
     },
@@ -87,6 +90,8 @@ export default {
         },
         //监测ifCloseSon， 如果为true， 就把ifLight全部置为false， 即儿子全部熄灭
         ifCloseSon(newValue){
+            if(typeof(this.secondMenuInfos) == "undefined")
+                return
             if(newValue){
                 for(let i = 0 ; i < this.secondMenuInfos.length ; i++)
                     this.ifLight[i] = false
