@@ -2,16 +2,18 @@
   <div>
     <div class="info">
       <topMenu :name="name" :userImg="userImg"></topMenu>
+      <mainArea></mainArea>
     </div>
   </div>
 </template>
 
 <script>
 import topMenu from '@/components/general/top-menu.vue'
+import mainArea from '@/components/main-area.vue'
 import Bus from '@/utils/bus.js'
 export default {
   components : {
-    topMenu
+    topMenu, mainArea
   },
   data() {
     return {

@@ -1,7 +1,7 @@
 <template>
     <div>
         <Menu :firstMenuInfos="firstMenuInfos" :secondMenuInfos="secondMenuInfos"
-                @realClick="getClickMethod"></Menu>
+                @realClick="getClickMethod" v-if="flag"></Menu>
     </div>
 </template>
 
@@ -31,7 +31,8 @@ export default {
                     "ifHaveSecondMenu" : true,
                 }
             ],
-            secondMenuInfos : [[{"secondMenuKey": 1,"name": "ALL"}],[{"secondMenuKey": 1,"name": "ALL"}]]
+            secondMenuInfos : [[{"secondMenuKey": 1,"name": "ALL"}],[{"secondMenuKey": 1,"name": "ALL"}]],
+            flag : false
         }
     },
     methods: {
@@ -44,6 +45,7 @@ export default {
         await axios.get("https://yapi.pro/mock/44512/yyym/menu")
                    .then(result => {
                         this.secondMenuInfos = result.data.data.secondInfos
+                        this.flag = true
                    })
     }
 }
