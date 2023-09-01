@@ -36,8 +36,12 @@ export default {
         }
     },
     methods: {
+        // EvenBus 广播点击的菜单信息
         getClickMethod(value) {
-            Bus.$emit('getBarName', this.firstMenuInfos[value.father - 1].name)
+            // 广播一级菜单的名字
+            Bus.$emit('getFirstMenuName', this.firstMenuInfos[value.father - 1].name)
+            // 广播二级菜单的名字
+            Bus.$emit('getSecondMenuName', this.secondMenuInfos[value.father - 1][value.son - 1].name)
         }
     },
     // 以下方法是在创建vue实例的时候将secondMenuInfos从后端请求回来

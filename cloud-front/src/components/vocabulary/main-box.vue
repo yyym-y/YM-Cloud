@@ -2,15 +2,17 @@
     <div>
         <div class="box">
             <toolBar></toolBar>
+            <vocArea></vocArea>
         </div>
     </div>
 </template>
 
 <script>
 import toolBar from '@/components/vocabulary/tool-bar.vue'
+import vocArea from '@/components/vocabulary/voca-area.vue'
 export default {
     components : {
-        toolBar
+        toolBar, vocArea
     }
 }
 </script>
@@ -23,7 +25,5 @@ export default {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
         margin-top: 20px;
-        display: flex;
-        justify-content: center;
     }
 </style>

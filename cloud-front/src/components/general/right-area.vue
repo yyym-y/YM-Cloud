@@ -22,7 +22,7 @@ export default {
     }
   },
   mounted() {
-    Bus.$on("getBarName", (name) => {
+    Bus.$on("getFirstMenuName", (name) => {
       console.log(name)
       this.name = name
     })
@@ -38,6 +38,6 @@ export default {
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
     float: right;
-
+    
   }
 </style>
