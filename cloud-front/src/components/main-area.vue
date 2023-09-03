@@ -14,7 +14,6 @@ export default {
     }
 }
 </script>
-
 <style scoped>
     .area{
         display: flex;

@@ -4,6 +4,7 @@ import store from './store'
 import Particles from 'particlesjs'
 import axios from 'axios'
 Vue.prototype.$axios = axios
+import router from './router'
 
 Vue.config.productionTip = false
 
@@ -19,5 +20,6 @@ window.onload = function() {
 
 new Vue({
   store,
+  router,
   render: h => h(App)
 }).$mount('#app')

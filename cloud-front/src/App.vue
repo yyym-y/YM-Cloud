@@ -1,17 +1,13 @@
 <template>
   <div class="area">
       <div class="real">
-        <Box></Box>
-      </div>      
+        <router-view></router-view>
+      </div>
     <canvas class="background"></canvas>
   </div>
 </template>
 <script>
-  import Box from '@/components/general/main-box.vue'
   export default {
-    components: {
-      Box
-    },
     data() {
       return {
         name : "Vocabulary"
