@@ -4,6 +4,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.yyym.cloudback.LogIn.cclass.RegisterSave;
+import org.yyym.cloudback.LogIn.dao.WriteRegisterInfo;
+import org.yyym.cloudback.LogIn.dao.WriteUserInfo;
 import org.yyym.cloudback.general.Result;
 import org.yyym.cloudback.general.SendEmail;
 
@@ -13,12 +16,13 @@ import java.util.Date;
 @RestController
 public class TEST {
     @Autowired
-    private SendEmail sendEmail;
+    private WriteUserInfo writeUserInfo;
 
     @RequestMapping("/Message")
     public Result test() {
-        for(int temp = 1 ; temp < 10 ; temp++)
-            sendEmail.send("2295957229@qq.com", "test", "xhx_sbbbbb", new Date());
+        writeUserInfo.write(new RegisterSave(
+                "k", "k", "k", "k"
+        ));
         return Result.success();
     }
 }
