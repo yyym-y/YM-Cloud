@@ -29,6 +29,8 @@ public class RegisterServeFirst implements org.yyym.cloudback.LogIn.service.Regi
     private WriteRegisterInfo writeRegisterInfo;
     @Override
     public Result serve(RegisterInput input) {
+        if(input.getEmail() == null || input.getUserName() == null || input.getPassword() == null)
+            return  Result.error("NULL_Error");
         Integer ID = queryUserName.query(input.getUserName());
         if (ID != null)
             return Result.error("UserName_Same_Error");

@@ -2,6 +2,7 @@ package org.yyym.cloudback.LogIn.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.yyym.cloudback.LogIn.cclass.RegisterSave;
@@ -18,11 +19,8 @@ public class TEST {
     @Autowired
     private WriteUserInfo writeUserInfo;
 
-    @RequestMapping("/Message")
+    @RequestMapping("/test")
     public Result test() {
-        writeUserInfo.write(new RegisterSave(
-                "k", "k", "k", "k"
-        ));
         return Result.success();
     }
 }

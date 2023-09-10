@@ -12,6 +12,16 @@
       return {
         name : "Vocabulary"
       }
+    },
+    provide() {
+      return {
+        config : {
+          headers: {
+            'content-Type': 'application/x-www-form-urlencoded'
+          }
+        },
+        head : "http://10.252.121.134:8080"
+      }
     }
   }
 </script>

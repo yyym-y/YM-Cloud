@@ -5,9 +5,11 @@ import Particles from 'particlesjs'
 import axios from 'axios'
 Vue.prototype.$axios = axios
 import router from './router'
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
 
 Vue.config.productionTip = false
-
+Vue.use(ElementUI);
 
 window.onload = function() {
   Particles.init({

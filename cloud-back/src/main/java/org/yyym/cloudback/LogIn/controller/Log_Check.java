@@ -16,6 +16,7 @@ public class Log_Check {
 
     @RequestMapping("/LogIn/Check")
     public Result log_check(UserLogInput input) {
+        System.out.println(input);
         return checkUserInputInfo.check(input);
     }
 }

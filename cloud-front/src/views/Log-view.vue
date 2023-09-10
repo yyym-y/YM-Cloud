@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import LogIn from '@/components/general/log-com.vue'
+import LogIn from '@/components/general/final-Log.vue'
 export default {
   components : {
     LogIn
